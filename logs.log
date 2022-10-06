@@ -1,0 +1,550 @@
+INFO:aiogram:Bot: Нашвилль [@Nash_Nashvill_bot]
+WARNING:aiogram:Updates were skipped successfully.
+INFO:aiogram.dispatcher.dispatcher:Start polling.
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:475] in chat [private:1372076472]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968820]: [success] (in 98 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:477] in chat [private:1372076472]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968821]: [success] (in 86 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:479] in chat [private:5052279194]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968822]: [success] (in 85 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:481] in chat [private:5052279194]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968823]: [success] (in 227 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:484] in chat [private:5052279194]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968824]: [success] (in 84 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:486] in chat [private:989706678]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968825]: [success] (in 118 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:488] in chat [private:5052279194]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968826]: [success] (in 185 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:490] in chat [private:989706678]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968827]: [success] (in 71 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:492] in chat [private:989706678]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968828]: [success] (in 166 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:495] in chat [private:5052279194]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968829]: [success] (in 90 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:497] in chat [private:989706678]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968830]: [success] (in 77 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:499] in chat [private:5052279194]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968831]: [success] (in 2247 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:503] in chat [private:5052279194]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968832]: [success] (in 95 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:505] in chat [private:5052279194]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968833]: [failed] (in 834 ms)
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-70' coro=<Dispatcher._process_polling_updates() done, defined at D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=ValueError('I/O operation on closed file')>
+Traceback (most recent call last):
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:/Users/Andrey/PycharmProjects/Passports/main.py", line 140, in register_photo
+    await bot.send_photo(chat_id=1372076472, photo=photo)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\bot\bot.py", line 495, in send_photo
+    result = await self.request(api.Methods.SEND_PHOTO, payload, files)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\bot\base.py", line 226, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\bot\api.py", line 139, in make_request
+    async with session.post(url, data=req, **kwargs) as response:
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\client.py", line 1138, in __aenter__
+    self._resp = await self._coro
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\client.py", line 507, in _request
+    req = self._request_class(
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\client_reqrep.py", line 313, in __init__
+    self.update_body_from_data(data)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\client_reqrep.py", line 507, in update_body_from_data
+    body = body()
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\formdata.py", line 170, in __call__
+    return self._gen_form_data()
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\formdata.py", line 163, in _gen_form_data
+    self._writer.append_payload(part)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\multipart.py", line 831, in append_payload
+    size = payload.size
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\payload.py", line 379, in size
+    return os.fstat(self._value.fileno()).st_size - self._value.tell()
+ValueError: I/O operation on closed file
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:508] in chat [private:989706678]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968834]: [success] (in 2244 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:512] in chat [private:989706678]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968835]: [success] (in 2332 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:516] in chat [private:989706678]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968836]: [success] (in 69 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:518] in chat [private:989706678]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968837]: [failed] (in 1079 ms)
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-95' coro=<Dispatcher._process_polling_updates() done, defined at D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=ValueError('I/O operation on closed file')>
+Traceback (most recent call last):
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:/Users/Andrey/PycharmProjects/Passports/main.py", line 140, in register_photo
+    await bot.send_photo(chat_id=1372076472, photo=photo)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\bot\bot.py", line 495, in send_photo
+    result = await self.request(api.Methods.SEND_PHOTO, payload, files)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\bot\base.py", line 226, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\bot\api.py", line 139, in make_request
+    async with session.post(url, data=req, **kwargs) as response:
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\client.py", line 1138, in __aenter__
+    self._resp = await self._coro
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\client.py", line 507, in _request
+    req = self._request_class(
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\client_reqrep.py", line 313, in __init__
+    self.update_body_from_data(data)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\client_reqrep.py", line 507, in update_body_from_data
+    body = body()
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\formdata.py", line 170, in __call__
+    return self._gen_form_data()
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\formdata.py", line 163, in _gen_form_data
+    self._writer.append_payload(part)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\multipart.py", line 831, in append_payload
+    size = payload.size
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\payload.py", line 379, in size
+    return os.fstat(self._value.fileno()).st_size - self._value.tell()
+ValueError: I/O operation on closed file
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:521] in chat [private:989706678]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968838]: [success] (in 72 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:523] in chat [private:989706678]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968839]: [success] (in 75 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:525] in chat [private:989706678]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968840]: [success] (in 87 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:527] in chat [private:1385464545]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968841]: [success] (in 78 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:529] in chat [private:1385464545]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968842]: [success] (in 158 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:532] in chat [private:1385464545]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968843]: [success] (in 160 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:534] in chat [private:989706678]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968844]: [success] (in 79 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:536] in chat [private:1385464545]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968845]: [success] (in 73 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:538] in chat [private:989706678]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968846]: [success] (in 69 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:540] in chat [private:1385464545]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968847]: [success] (in 130 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:542] in chat [private:989706678]
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:544] in chat [private:1385464545]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968849]: [success] (in 65 ms)
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968848]: [failed] (in 800 ms)
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-148' coro=<Dispatcher._process_polling_updates() done, defined at D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=ValueError('I/O operation on closed file')>
+Traceback (most recent call last):
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:/Users/Andrey/PycharmProjects/Passports/main.py", line 140, in register_photo
+    await bot.send_photo(chat_id=1372076472, photo=photo)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\bot\bot.py", line 495, in send_photo
+    result = await self.request(api.Methods.SEND_PHOTO, payload, files)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\bot\base.py", line 226, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\bot\api.py", line 139, in make_request
+    async with session.post(url, data=req, **kwargs) as response:
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\client.py", line 1138, in __aenter__
+    self._resp = await self._coro
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\client.py", line 507, in _request
+    req = self._request_class(
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\client_reqrep.py", line 313, in __init__
+    self.update_body_from_data(data)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\client_reqrep.py", line 507, in update_body_from_data
+    body = body()
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\formdata.py", line 170, in __call__
+    return self._gen_form_data()
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\formdata.py", line 163, in _gen_form_data
+    self._writer.append_payload(part)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\multipart.py", line 831, in append_payload
+    size = payload.size
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\payload.py", line 379, in size
+    return os.fstat(self._value.fileno()).st_size - self._value.tell()
+ValueError: I/O operation on closed file
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:547] in chat [private:1385464545]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968850]: [success] (in 2308 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:551] in chat [private:5052279194]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968851]: [success] (in 71 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:553] in chat [private:1385464545]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968852]: [success] (in 2380 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:557] in chat [private:5052279194]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968853]: [failed] (in 668 ms)
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-176' coro=<Dispatcher._process_polling_updates() done, defined at D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=ValueError('I/O operation on closed file')>
+Traceback (most recent call last):
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:/Users/Andrey/PycharmProjects/Passports/main.py", line 140, in register_photo
+    await bot.send_photo(chat_id=1372076472, photo=photo)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\bot\bot.py", line 495, in send_photo
+    result = await self.request(api.Methods.SEND_PHOTO, payload, files)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\bot\base.py", line 226, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\bot\api.py", line 139, in make_request
+    async with session.post(url, data=req, **kwargs) as response:
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\client.py", line 1138, in __aenter__
+    self._resp = await self._coro
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\client.py", line 507, in _request
+    req = self._request_class(
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\client_reqrep.py", line 313, in __init__
+    self.update_body_from_data(data)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\client_reqrep.py", line 507, in update_body_from_data
+    body = body()
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\formdata.py", line 170, in __call__
+    return self._gen_form_data()
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\formdata.py", line 163, in _gen_form_data
+    self._writer.append_payload(part)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\multipart.py", line 831, in append_payload
+    size = payload.size
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\payload.py", line 379, in size
+    return os.fstat(self._value.fileno()).st_size - self._value.tell()
+ValueError: I/O operation on closed file
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:560] in chat [private:989706678]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968854]: [success] (in 70 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:562] in chat [private:1385464545]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968855]: [success] (in 104 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:564] in chat [private:989706678]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968856]: [success] (in 76 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:565] in chat [private:5052279194]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968857]: [success] (in 70 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:568] in chat [private:989706678]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968858]: [success] (in 85 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:570] in chat [private:5052279194]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968859]: [failed] (in 610 ms)
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-203' coro=<Dispatcher._process_polling_updates() done, defined at D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=ValueError('I/O operation on closed file')>
+Traceback (most recent call last):
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:/Users/Andrey/PycharmProjects/Passports/main.py", line 140, in register_photo
+    await bot.send_photo(chat_id=1372076472, photo=photo)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\bot\bot.py", line 495, in send_photo
+    result = await self.request(api.Methods.SEND_PHOTO, payload, files)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\bot\base.py", line 226, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\bot\api.py", line 139, in make_request
+    async with session.post(url, data=req, **kwargs) as response:
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\client.py", line 1138, in __aenter__
+    self._resp = await self._coro
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\client.py", line 507, in _request
+    req = self._request_class(
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\client_reqrep.py", line 313, in __init__
+    self.update_body_from_data(data)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\client_reqrep.py", line 507, in update_body_from_data
+    body = body()
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\formdata.py", line 170, in __call__
+    return self._gen_form_data()
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\formdata.py", line 163, in _gen_form_data
+    self._writer.append_payload(part)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\multipart.py", line 831, in append_payload
+    size = payload.size
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\payload.py", line 379, in size
+    return os.fstat(self._value.fileno()).st_size - self._value.tell()
+ValueError: I/O operation on closed file
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:573] in chat [private:1385464545]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968860]: [success] (in 2256 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:577] in chat [private:1385464545]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968861]: [success] (in 70 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:579] in chat [private:5052279194]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968862]: [success] (in 93 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:581] in chat [private:1385464545]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968863]: [success] (in 130 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:583] in chat [private:1385464545]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968864]: [success] (in 73 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:585] in chat [private:1385464545]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968865]: [success] (in 69 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:587] in chat [private:1385464545]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968866]: [success] (in 88 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:589] in chat [private:1385464545]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968867]: [success] (in 158 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:591] in chat [private:1385464545]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968868]: [success] (in 131 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:593] in chat [private:1385464545]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968869]: [success] (in 2253 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:597] in chat [private:1385464545]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968870]: [success] (in 2284 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:601] in chat [private:1385464545]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968871]: [success] (in 2352 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:605] in chat [private:1385464545]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968872]: [success] (in 69 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:607] in chat [private:1385464545]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968873]: [success] (in 80 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:609] in chat [private:1385464545]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968874]: [success] (in 88 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:611] in chat [private:1385464545]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968875]: [success] (in 81 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:613] in chat [private:1385464545]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968876]: [success] (in 76 ms)
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-290' coro=<Dispatcher._process_polling_updates() done, defined at D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=OSError(22, 'Invalid argument')>
+Traceback (most recent call last):
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 302, in process_update
+    return await self.my_chat_member_handlers.notify(update.my_chat_member)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\handler.py", line 100, in notify
+    await self.dispatcher.middleware.trigger(f"pre_process_{self.middleware_key}", args + (data,))
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\middlewares.py", line 53, in trigger
+    await app.trigger(action, args)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\middlewares.py", line 106, in trigger
+    await handler(*args)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\contrib\middlewares\logging.py", line 167, in on_pre_process_my_chat_member
+    self.logger.info(f"Received chat member update "
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\types\base.py", line 177, in to_python
+    value = self.props[name].export(self)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\types\fields.py", line 95, in export
+    return self.serialize(self.get_value(instance))
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\types\fields.py", line 172, in serialize
+    return round(value.timestamp())
+OSError: [Errno 22] Invalid argument
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-293' coro=<Dispatcher._process_polling_updates() done, defined at D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=OSError(22, 'Invalid argument')>
+Traceback (most recent call last):
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 302, in process_update
+    return await self.my_chat_member_handlers.notify(update.my_chat_member)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\handler.py", line 100, in notify
+    await self.dispatcher.middleware.trigger(f"pre_process_{self.middleware_key}", args + (data,))
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\middlewares.py", line 53, in trigger
+    await app.trigger(action, args)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\middlewares.py", line 106, in trigger
+    await handler(*args)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\contrib\middlewares\logging.py", line 167, in on_pre_process_my_chat_member
+    self.logger.info(f"Received chat member update "
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\types\base.py", line 177, in to_python
+    value = self.props[name].export(self)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\types\fields.py", line 95, in export
+    return self.serialize(self.get_value(instance))
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\types\fields.py", line 172, in serialize
+    return round(value.timestamp())
+OSError: [Errno 22] Invalid argument
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:615] in chat [private:1385464545]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968879]: [success] (in 110 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:617] in chat [private:5540126353]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968880]: [success] (in 80 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:619] in chat [private:5540126353]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968881]: [success] (in 144 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:622] in chat [private:5540126353]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968882]: [success] (in 77 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:624] in chat [private:5540126353]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968883]: [success] (in 72 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:626] in chat [private:5540126353]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968884]: [success] (in 72 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:628] in chat [private:5540126353]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968885]: [success] (in 72 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:630] in chat [private:5540126353]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968886]: [success] (in 86 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:632] in chat [private:5540126353]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968887]: [success] (in 78 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:634] in chat [private:5540126353]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968888]: [success] (in 90 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:636] in chat [private:5540126353]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968889]: [success] (in 69 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:638] in chat [private:5540126353]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968890]: [success] (in 73 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:640] in chat [private:5540126353]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968891]: [success] (in 103 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:642] in chat [private:5540126353]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968892]: [success] (in 86 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:644] in chat [private:5540126353]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968893]: [success] (in 82 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:646] in chat [private:5540126353]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968894]: [success] (in 83 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:648] in chat [private:5540126353]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968895]: [success] (in 79 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:650] in chat [private:5540126353]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968896]: [success] (in 106 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:652] in chat [private:5540126353]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968897]: [success] (in 71 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:654] in chat [private:5540126353]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968898]: [success] (in 87 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:656] in chat [private:5540126353]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968899]: [success] (in 70 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:658] in chat [private:5540126353]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968900]: [success] (in 74 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:660] in chat [private:5540126353]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968901]: [success] (in 135 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:662] in chat [private:5540126353]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968902]: [success] (in 68 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:664] in chat [private:5540126353]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968903]: [success] (in 111 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:666] in chat [private:5540126353]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968904]: [success] (in 181 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:668] in chat [private:5540126353]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968905]: [success] (in 75 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:670] in chat [private:5540126353]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968906]: [success] (in 73 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:672] in chat [private:5540126353]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968907]: [success] (in 134 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:674] in chat [private:5540126353]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968908]: [success] (in 81 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:676] in chat [private:5540126353]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968909]: [success] (in 82 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:678] in chat [private:5540126353]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968910]: [success] (in 69 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:680] in chat [private:5540126353]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968911]: [success] (in 85 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:682] in chat [private:5540126353]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968912]: [success] (in 113 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:684] in chat [private:5540126353]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968913]: [success] (in 79 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:686] in chat [private:5540126353]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968914]: [success] (in 88 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:688] in chat [private:5540126353]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968915]: [success] (in 115 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:690] in chat [private:5540126353]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968916]: [success] (in 67 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:692] in chat [private:5540126353]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968917]: [success] (in 2464 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:696] in chat [private:5540126353]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968918]: [success] (in 73 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:698] in chat [private:5540126353]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968919]: [failed] (in 810 ms)
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-465' coro=<Dispatcher._process_polling_updates() done, defined at D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=ValueError('I/O operation on closed file')>
+Traceback (most recent call last):
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:/Users/Andrey/PycharmProjects/Passports/main.py", line 140, in register_photo
+    photo.close()
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\bot\bot.py", line 495, in send_photo
+    result = await self.request(api.Methods.SEND_PHOTO, payload, files)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\bot\base.py", line 226, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "D:\Andrey\Anaconda\lib\site-packages\aiogram\bot\api.py", line 139, in make_request
+    async with session.post(url, data=req, **kwargs) as response:
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\client.py", line 1138, in __aenter__
+    self._resp = await self._coro
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\client.py", line 507, in _request
+    req = self._request_class(
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\client_reqrep.py", line 313, in __init__
+    self.update_body_from_data(data)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\client_reqrep.py", line 507, in update_body_from_data
+    body = body()
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\formdata.py", line 170, in __call__
+    return self._gen_form_data()
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\formdata.py", line 163, in _gen_form_data
+    self._writer.append_payload(part)
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\multipart.py", line 831, in append_payload
+    size = payload.size
+  File "D:\Andrey\Anaconda\lib\site-packages\aiohttp\payload.py", line 379, in size
+    return os.fstat(self._value.fileno()).st_size - self._value.tell()
+ValueError: I/O operation on closed file
+INFO:aiogram.dispatcher.dispatcher:Stop polling...
+WARNING:aiogram:Goodbye!
+INFO:aiogram:Bot: Нашвилль [@Nash_Nashvill_bot]
+WARNING:aiogram:Updates were skipped successfully.
+INFO:aiogram.dispatcher.dispatcher:Start polling.
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:701] in chat [private:1372076472]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968920]: [success] (in 260 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:704] in chat [private:1372076472]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968921]: [success] (in 113 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:706] in chat [private:1372076472]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968922]: [success] (in 84 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:708] in chat [private:1372076472]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968923]: [success] (in 2292 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:712] in chat [private:1372076472]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968924]: [success] (in 70 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:714] in chat [private:1372076472]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968925]: [success] (in 757 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:718] in chat [private:1372076472]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968926]: [success] (in 69 ms)
+INFO:aiogram.dispatcher.dispatcher:Stop polling...
+WARNING:aiogram:Goodbye!
+INFO:aiogram:Bot: Нашвилль [@Nash_Nashvill_bot]
+WARNING:aiogram:Updates were skipped successfully.
+INFO:aiogram.dispatcher.dispatcher:Start polling.
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:720] in chat [private:1372076472]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968927]: [success] (in 320 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:723] in chat [private:1372076472]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968928]: [success] (in 2353 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:727] in chat [private:1372076472]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968929]: [success] (in 76 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:729] in chat [private:1372076472]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968930]: [success] (in 2226 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:733] in chat [private:1372076472]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968931]: [success] (in 2253 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:737] in chat [private:1372076472]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968932]: [success] (in 131 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:739] in chat [private:1372076472]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968933]: [success] (in 780 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:743] in chat [private:1372076472]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968934]: [success] (in 66 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:745] in chat [private:1372076472]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968935]: [success] (in 80 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:747] in chat [private:1372076472]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968936]: [success] (in 147 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:750] in chat [private:1372076472]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968937]: [success] (in 90 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:752] in chat [private:1372076472]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968938]: [success] (in 67 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:754] in chat [private:1372076472]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968939]: [success] (in 2286 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:758] in chat [private:1372076472]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968940]: [success] (in 74 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:760] in chat [private:1372076472]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968941]: [success] (in 714 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:764] in chat [private:989706678]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968942]: [success] (in 112 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:766] in chat [private:989706678]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968943]: [success] (in 181 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:769] in chat [private:989706678]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968944]: [success] (in 173 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:771] in chat [private:989706678]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968945]: [success] (in 2336 ms)
+INFO:aiogram.dispatcher.dispatcher:Stop polling...
+WARNING:aiogram:Goodbye!
+INFO:aiogram:Bot: Нашвилль [@Nash_Nashvill_bot]
+WARNING:aiogram:Updates were skipped successfully.
+INFO:aiogram.dispatcher.dispatcher:Start polling.
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:778] in chat [private:869563097]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968949]: [success] (in 173 ms)
+INFO:aiogram.contrib.middlewares.logging:Received message [ID:780] in chat [private:1372076472]
+INFO:aiogram.contrib.middlewares.logging:Process update [ID:131968950]: [success] (in 106 ms)
